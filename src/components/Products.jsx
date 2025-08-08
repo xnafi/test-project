@@ -6,6 +6,7 @@ import LoadingSkeleton from "./LoadingSkeleton";
 import ProductCard from "./ProductCard";
 
 
+
 const Products = () => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState([]);
@@ -62,6 +63,7 @@ const Products = () => {
         ) : (
           filter.map((product) => (
             <ProductCard
+              category={product.category}
               key={product.id}
               product={product}
               onAdd={addProduct}
